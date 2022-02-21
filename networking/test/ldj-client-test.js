@@ -28,4 +28,8 @@ describe('LDJClient', () => {
         stream.emit('data','{"foo":');
         process.nextTick(() => stream.emit('data', '"bar"}\n'));
     });
+
+    it('should finish within 5 seconds', done => {
+        setTimeout(done, 4500); // call done after 4.5 seconds
+    }).timeout(5000);
 });
