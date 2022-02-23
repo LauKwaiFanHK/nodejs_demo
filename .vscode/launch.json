@@ -17,11 +17,11 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "rep",
+            "name": "rep-cluster",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/microservices/zmq-filer-rep.js"
+            "program": "${workspaceFolder}/microservices/zmq-filer-rep-cluster.js"
         }
     ]
 }
