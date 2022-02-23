@@ -13,6 +13,7 @@ responder.on('message', data => {
     console.log(`Received request to get: ${request.path}`);
 
     // Read the file and reply with content
+    // reply by reciving the request, processing it and sending it back a response
     fs.readFile(request.path, (err, content) => {
         console.log('Sending response content.');
         if (err) throw err; // error occurs when no file is found
